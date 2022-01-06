@@ -1,0 +1,8 @@
+Ok I decided to scrap the neural network idea. Sounds way too complicated for a class project.
+What I can do that is not that far from my original idea and is still pretty cool, is 
+create a bot that you can either send a meme image to, or make it find the image for you.
+It then sends the image (or a bunch of them for the user to make a selection from) to the
+user in a private chat. The user then chooses the image and gives the bot some text to add
+to it. Then it adds the user's requested meme text with the classic meme font. 
+Users should be able to control the size and the placement of the text if they want. 
+The bot should also be able to add a blank white space at the top of the image if needed.

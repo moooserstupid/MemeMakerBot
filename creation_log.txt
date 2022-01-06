@@ -1,0 +1,12 @@
+#memebot creation log
+3.11.2021
+-Learned a bit about async and different types of processing (multiprocessing, concurrency and threading).
+-Learned more about the discord.py library and its utility functions.
+-Learned about why env files are useful and used them to secure my bot token.
+-Got the first working example of the bot set up. It can say hello!
+-Learned about exception handling using the Discord API.
+8.11.2021
+-Created a config file and a config file parsing system.
+26.11.2021
+-Decided to use google python style guide.
+
