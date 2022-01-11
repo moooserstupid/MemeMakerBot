@@ -22,8 +22,8 @@ logger = logging.getLogger('discord')
 logger.setLevel(logging.DEBUG)
 handler = logging.FileHandler(filename='discord.log',
                               encoding='utf-8', mode='w')
-handler.setFormatter(
-    logging.Formatter('%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
+handler.setFormatter(logging.Formatter(
+                        '%(asctime)s:%(levelname)s:%(name)s: %(message)s'))
 logger.addHandler(handler)
 
 # Setting up bot intents
@@ -36,6 +36,7 @@ config = ConfigParser()
 config.read('config.ini')
 prefix = config['Bot Prefixes']['prefix']
 altprefix = config['Bot Prefixes']['altprefix']
+bot_trigger = config['Bot Trigger']['trigger']
 bot = commands.Bot(command_prefix=[prefix, altprefix], intents = intents)
 
 
@@ -45,7 +46,7 @@ async def on_ready():
     print(f'{bot.user.name} has connected to Discord!')
 
 
-@bot.command(name='meme', help='Command used to activate the bot.')
+@bot.command(name=bot_trigger, help='Command used to activate the bot.')
 async def meme(ctx):
     """Bot activation command
 
